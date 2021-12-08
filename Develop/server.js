@@ -2,25 +2,23 @@
 const fs = require("fs/promises");
 const express = require("express");
 const path = require("path");
-
-//const { clog } = require("./middleware/clog");
-const api = require("./routes/index.js");
+const { clog } = require("./middleware/clog");
+//const api = require("./routes/index.js");
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-/* 
-IF NEEDED: Import custom middleware, "cLog" 
+//Import custom middleware, "cLog"
 app.use(clog);
-*/
 
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/notes", api);
+//app.use("/api/notes", api);
 
+// Enables CSS and JS to apply to public-facing HTML document
 app.use(express.static("public"));
 
 // GET Route for notes page: `GET /notes` should return the `notes.html` file.
