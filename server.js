@@ -1,9 +1,8 @@
 // Use "fs" module to store and retrieve notes
-const fs = require("fs/promises");
 const express = require("express");
 const path = require("path");
 const { clog } = require("./middleware/clog");
-//const api = require("./routes/index.js");
+const { getNotes, addNote } = require("./routes/index.js");
 
 const PORT = process.env.PORT || 3001;
 
@@ -16,7 +15,8 @@ app.use(clog);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//app.use("/api/notes", api);
+app.get("/api/notes", getNotes);
+app.post("/api/notes", addNote);
 
 // Enables CSS and JS to apply to public-facing HTML document
 app.use(express.static("public"));
