@@ -1,13 +1,3 @@
-# GETTING STARTED
-
-Use 'fs' module to store and retrieve notes
-
-## Create the following HTML routes:
-
-- `GET /notes` should return the `notes.html` file.
-
-- `GET *` should return the `index.html` file.
-
 ## Create the following API routes:
 
 - `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
