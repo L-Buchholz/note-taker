@@ -26,7 +26,7 @@ Additionally, there are no errors in the console when it is inspected using Chro
 
 The following is a screenshot of the webpage, highlighting its appearance and functionality:
 
-![Interactive note taking application. This image includes: BLAH BLAH BLAH.](./assets/images/screenshot.png)
+![Interactive note taking application. This image includes: a left-hand column with existing note titles; a right-hand column with an open note and note text; and icons indicating Delete and Add Note functionality (not shown: "Save" icon).](./assets/screenshot.png)
 
 ## Link to deployed application
 

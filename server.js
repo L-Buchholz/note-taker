@@ -2,10 +2,11 @@
 const express = require("express");
 const path = require("path");
 const { clog } = require("./middleware/clog");
-const { getNotes, addNote } = require("./routes/index.js");
+const editNotes = require("./db/editNotes");
 
 const PORT = process.env.PORT || 3001;
 
+// Same as saying: const app = require("express").Router;
 const app = express();
 
 //Import custom middleware, "cLog"
@@ -15,11 +16,15 @@ app.use(clog);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/api/notes", getNotes);
-app.post("/api/notes", addNote);
-
 // Enables CSS and JS to apply to public-facing HTML document
 app.use(express.static("public"));
+
+app.use("/api", editNotes);
+
+// Assigning functions to api string
+// Create (add) a note, retrieve (get) all notes, update a note, delete a note:
+app.get("/", editNotes);
+app.post("/", editNotes);
 
 // GET Route for notes page: `GET /notes` should return the `notes.html` file.
 app.get("/notes", (req, res) =>
