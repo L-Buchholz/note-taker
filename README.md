@@ -22,7 +22,7 @@ As a component of this assignment:
 
 Additionally, there are no errors in the console when it is inspected using Chrome DevTools and the Javascript includes comments.
 
-## Note Taker webpage -- UPDATE DESCRIPTION
+## Note Taker webpage
 
 The following is a screenshot of the webpage, highlighting its appearance and functionality:
 
@@ -30,4 +30,4 @@ The following is a screenshot of the webpage, highlighting its appearance and fu
 
 ## Link to deployed application
 
-The note taker webpage can be found here: [LINK ME]
+The note taker webpage can be found here: https://note-taker-l-buchholz.herokuapp.com/
